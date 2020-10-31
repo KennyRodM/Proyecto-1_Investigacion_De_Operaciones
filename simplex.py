@@ -176,7 +176,6 @@ def simplex_method(iteration):
         return 0
         
     else:
-        next_iteration = input("Presione Enter para la siguiente iteración")
         restriction = determine_restriction(mnv[2],iteration)
         #When there is no elegible restriction, means that there is no solution with simplex
         if restriction[0] == None:
@@ -358,7 +357,8 @@ def print_solution():
     print("Por lo tanto el valor óptimo de U es: ")
     out.write("U = " + str(answer["U"])+"\n")
     print("U = " + str(answer["U"]))
-    out.close()
+    if method != 2:
+        out.close()
    
 
 
